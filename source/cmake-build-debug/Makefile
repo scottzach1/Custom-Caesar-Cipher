@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "Z:\Drive\University\NWEN 243\proj_1"
+CMAKE_SOURCE_DIR = Z:\Drive\GitHub\NWEN243_Project1\source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug"
+CMAKE_BINARY_DIR = Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles" "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

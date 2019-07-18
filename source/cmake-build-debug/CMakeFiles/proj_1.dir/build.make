@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.1.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "Z:\Drive\University\NWEN 243\proj_1"
+CMAKE_SOURCE_DIR = Z:\Drive\GitHub\NWEN243_Project1\source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug"
+CMAKE_BINARY_DIR = Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proj_1.dir/depend.make
@@ -58,29 +58,29 @@ include CMakeFiles/proj_1.dir/flags.make
 
 CMakeFiles/proj_1.dir/encode-skel.c.obj: CMakeFiles/proj_1.dir/flags.make
 CMakeFiles/proj_1.dir/encode-skel.c.obj: ../encode-skel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proj_1.dir/encode-skel.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\encode-skel.c.obj   -c "Z:\Drive\University\NWEN 243\proj_1\encode-skel.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proj_1.dir/encode-skel.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\encode-skel.c.obj   -c Z:\Drive\GitHub\NWEN243_Project1\source\encode-skel.c
 
 CMakeFiles/proj_1.dir/encode-skel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proj_1.dir/encode-skel.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Drive\University\NWEN 243\proj_1\encode-skel.c" > CMakeFiles\proj_1.dir\encode-skel.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\Drive\GitHub\NWEN243_Project1\source\encode-skel.c > CMakeFiles\proj_1.dir\encode-skel.c.i
 
 CMakeFiles/proj_1.dir/encode-skel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proj_1.dir/encode-skel.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Drive\University\NWEN 243\proj_1\encode-skel.c" -o CMakeFiles\proj_1.dir\encode-skel.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\Drive\GitHub\NWEN243_Project1\source\encode-skel.c -o CMakeFiles\proj_1.dir\encode-skel.c.s
 
 CMakeFiles/proj_1.dir/decode-skel.c.obj: CMakeFiles/proj_1.dir/flags.make
 CMakeFiles/proj_1.dir/decode-skel.c.obj: ../decode-skel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proj_1.dir/decode-skel.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\decode-skel.c.obj   -c "Z:\Drive\University\NWEN 243\proj_1\decode-skel.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proj_1.dir/decode-skel.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\decode-skel.c.obj   -c Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c
 
 CMakeFiles/proj_1.dir/decode-skel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proj_1.dir/decode-skel.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Drive\University\NWEN 243\proj_1\decode-skel.c" > CMakeFiles\proj_1.dir\decode-skel.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c > CMakeFiles\proj_1.dir\decode-skel.c.i
 
 CMakeFiles/proj_1.dir/decode-skel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proj_1.dir/decode-skel.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Drive\University\NWEN 243\proj_1\decode-skel.c" -o CMakeFiles\proj_1.dir\decode-skel.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c -o CMakeFiles\proj_1.dir\decode-skel.c.s
 
 # Object files for target proj_1
 proj_1_OBJECTS = \
@@ -96,7 +96,7 @@ proj_1.exe: CMakeFiles/proj_1.dir/build.make
 proj_1.exe: CMakeFiles/proj_1.dir/linklibs.rsp
 proj_1.exe: CMakeFiles/proj_1.dir/objects1.rsp
 proj_1.exe: CMakeFiles/proj_1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable proj_1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable proj_1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\proj_1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/proj_1.dir/clean:
 .PHONY : CMakeFiles/proj_1.dir/clean
 
 CMakeFiles/proj_1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "Z:\Drive\University\NWEN 243\proj_1" "Z:\Drive\University\NWEN 243\proj_1" "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug" "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug" "Z:\Drive\University\NWEN 243\proj_1\cmake-build-debug\CMakeFiles\proj_1.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" Z:\Drive\GitHub\NWEN243_Project1\source Z:\Drive\GitHub\NWEN243_Project1\source Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles\proj_1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/proj_1.dir/depend
 

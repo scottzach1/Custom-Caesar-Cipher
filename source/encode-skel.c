@@ -42,23 +42,52 @@ char* fixkey(char* s){
   return strcpy(s, plain);
 }
 
-void buildtable (char* key, char* encode){
+char *table;
+int offset;
 
-  // This function needs to build an array of mappings in the 'encode' array from plaintext characters
-  // to encypered characters.  The encode array will be indexed by the plaintext char.  To 
-  // make this a useful 0-26 index for the array, 'A' will be stubtracted from it (yes you
-  // can do this in C).  You can see this in the main(){} below.  The values in the array 
-  // will be the cipher value, in the example at the top A -> H, B -> J, etc.
+void buildtable (char* key, char* encode) {
 
-  // You are implementing a Caesar 1 & 2 combo Cypher as given in handout.
-  // Your code here:
+    // This function needs to build an array of mappings in the 'encode' array from plaintext characters
+    // to encypered characters.  The encode array will be indexed by the plaintext char.  To
+    // make this a useful 0-26 index for the array, 'A' will be stubtracted from it (yes you
+    // can do this in C).  You can see this in the main(){} below.  The values in the array
+    // will be the cipher value, in the example at the top A -> H, B -> J, etc.
 
-  // probably need to declare some stuff here!
-  
-  fixkey(key); // fix the key, i.e., uppercase and remove whitespace and punctuation
+    // You are implementing a Caesar 1 & 2 combo Cypher as given in handout.
+    // Your code here:
 
-  // Do some stuff here to make a translation between plain and cypher maps.
-  
+
+    //TODO: The following code has not been tested, do not trust it yet.
+
+    offset = strlen(key);
+    memset(table, 26, sizeof(char)); // Allocate enough memory for the encipher table.
+
+    // NOTE: The following will alter the key.
+    fixkey(key); // fix the key, i.e., uppercase and remove whitespace and punctuation
+
+    int tableIndex = offset;
+    for (int keyIndex = 0; keyIndex < strlen(key); ++keyIndex) {
+        if (tableIndex > 25) tableIndex = 0; // reset index
+        table[tableIndex] = key[keyIndex];
+        ++tableIndex;
+    }
+
+    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char prevChar = (tableIndex != 0) ? table[tableIndex - 1] : table[0];
+
+    // WHILE: We have not written to this location yet.
+    while (!table[tableIndex]) {
+        if (tableIndex > 25) tableIndex = 0; // reset index
+        char newChar = (prevChar != 'Z]') ? prevChar + 1 : 'A';
+
+        table[tableIndex] = newChar;
+        prevChar = newChar;
+
+        ++tableIndex;
+    }
+
+    // Do some stuff here to make a translation between plain and cypher maps.
+
 }
 
 int main(int argc, char **argv){
