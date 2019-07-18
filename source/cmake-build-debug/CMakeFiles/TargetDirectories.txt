@@ -1,0 +1,3 @@
+Z:/Drive/University/NWEN 243/proj_1/cmake-build-debug/CMakeFiles/proj_1.dir
+Z:/Drive/University/NWEN 243/proj_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+Z:/Drive/University/NWEN 243/proj_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
