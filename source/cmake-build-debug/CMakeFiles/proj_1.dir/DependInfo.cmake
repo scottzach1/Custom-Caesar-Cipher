@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "Z:/Drive/GitHub/NWEN243_Project1/source/decode-skel.c" "Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/proj_1.dir/decode-skel.c.obj"
   "Z:/Drive/GitHub/NWEN243_Project1/source/encode-skel.c" "Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/proj_1.dir/encode-skel.c.obj"
+  "Z:/Drive/GitHub/NWEN243_Project1/source/encode_draft.c" "Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/proj_1.dir/encode_draft.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

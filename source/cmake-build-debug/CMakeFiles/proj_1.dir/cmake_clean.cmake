@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/proj_1.dir/encode_draft.c.obj"
   "CMakeFiles/proj_1.dir/encode-skel.c.obj"
-  "CMakeFiles/proj_1.dir/decode-skel.c.obj"
   "proj_1.pdb"
   "proj_1.exe"
   "proj_1.exe.manifest"

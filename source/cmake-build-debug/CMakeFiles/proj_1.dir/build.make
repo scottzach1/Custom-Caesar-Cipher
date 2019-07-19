@@ -56,9 +56,22 @@ include CMakeFiles/proj_1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/proj_1.dir/flags.make
 
+CMakeFiles/proj_1.dir/encode_draft.c.obj: CMakeFiles/proj_1.dir/flags.make
+CMakeFiles/proj_1.dir/encode_draft.c.obj: ../encode_draft.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proj_1.dir/encode_draft.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\encode_draft.c.obj   -c Z:\Drive\GitHub\NWEN243_Project1\source\encode_draft.c
+
+CMakeFiles/proj_1.dir/encode_draft.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proj_1.dir/encode_draft.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\Drive\GitHub\NWEN243_Project1\source\encode_draft.c > CMakeFiles\proj_1.dir\encode_draft.c.i
+
+CMakeFiles/proj_1.dir/encode_draft.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proj_1.dir/encode_draft.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\Drive\GitHub\NWEN243_Project1\source\encode_draft.c -o CMakeFiles\proj_1.dir\encode_draft.c.s
+
 CMakeFiles/proj_1.dir/encode-skel.c.obj: CMakeFiles/proj_1.dir/flags.make
 CMakeFiles/proj_1.dir/encode-skel.c.obj: ../encode-skel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proj_1.dir/encode-skel.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proj_1.dir/encode-skel.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\encode-skel.c.obj   -c Z:\Drive\GitHub\NWEN243_Project1\source\encode-skel.c
 
 CMakeFiles/proj_1.dir/encode-skel.c.i: cmake_force
@@ -69,29 +82,16 @@ CMakeFiles/proj_1.dir/encode-skel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proj_1.dir/encode-skel.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\Drive\GitHub\NWEN243_Project1\source\encode-skel.c -o CMakeFiles\proj_1.dir\encode-skel.c.s
 
-CMakeFiles/proj_1.dir/decode-skel.c.obj: CMakeFiles/proj_1.dir/flags.make
-CMakeFiles/proj_1.dir/decode-skel.c.obj: ../decode-skel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=Z:\Drive\GitHub\NWEN243_Project1\source\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proj_1.dir/decode-skel.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\proj_1.dir\decode-skel.c.obj   -c Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c
-
-CMakeFiles/proj_1.dir/decode-skel.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proj_1.dir/decode-skel.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c > CMakeFiles\proj_1.dir\decode-skel.c.i
-
-CMakeFiles/proj_1.dir/decode-skel.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proj_1.dir/decode-skel.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S Z:\Drive\GitHub\NWEN243_Project1\source\decode-skel.c -o CMakeFiles\proj_1.dir\decode-skel.c.s
-
 # Object files for target proj_1
 proj_1_OBJECTS = \
-"CMakeFiles/proj_1.dir/encode-skel.c.obj" \
-"CMakeFiles/proj_1.dir/decode-skel.c.obj"
+"CMakeFiles/proj_1.dir/encode_draft.c.obj" \
+"CMakeFiles/proj_1.dir/encode-skel.c.obj"
 
 # External object files for target proj_1
 proj_1_EXTERNAL_OBJECTS =
 
+proj_1.exe: CMakeFiles/proj_1.dir/encode_draft.c.obj
 proj_1.exe: CMakeFiles/proj_1.dir/encode-skel.c.obj
-proj_1.exe: CMakeFiles/proj_1.dir/decode-skel.c.obj
 proj_1.exe: CMakeFiles/proj_1.dir/build.make
 proj_1.exe: CMakeFiles/proj_1.dir/linklibs.rsp
 proj_1.exe: CMakeFiles/proj_1.dir/objects1.rsp

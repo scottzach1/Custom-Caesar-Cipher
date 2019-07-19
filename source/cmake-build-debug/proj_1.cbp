@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="Z:/Drive/GitHub/NWEN243_Project1/source/decode-skel.c">
+		<Unit filename="Z:/Drive/GitHub/NWEN243_Project1/source/encode-skel.c">
 			<Option target="proj_1"/>
 		</Unit>
-		<Unit filename="Z:/Drive/GitHub/NWEN243_Project1/source/encode-skel.c">
+		<Unit filename="Z:/Drive/GitHub/NWEN243_Project1/source/encode_draft.c">
 			<Option target="proj_1"/>
 		</Unit>
 		<Unit filename="Z:/Drive/GitHub/NWEN243_Project1/source/CMakeLists.txt">

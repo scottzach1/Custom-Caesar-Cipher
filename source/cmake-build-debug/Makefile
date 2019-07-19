@@ -122,33 +122,6 @@ proj_1/fast:
 	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/build
 .PHONY : proj_1/fast
 
-decode-skel.obj: decode-skel.c.obj
-
-.PHONY : decode-skel.obj
-
-# target to build an object file
-decode-skel.c.obj:
-	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/decode-skel.c.obj
-.PHONY : decode-skel.c.obj
-
-decode-skel.i: decode-skel.c.i
-
-.PHONY : decode-skel.i
-
-# target to preprocess a source file
-decode-skel.c.i:
-	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/decode-skel.c.i
-.PHONY : decode-skel.c.i
-
-decode-skel.s: decode-skel.c.s
-
-.PHONY : decode-skel.s
-
-# target to generate assembly for a file
-decode-skel.c.s:
-	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/decode-skel.c.s
-.PHONY : decode-skel.c.s
-
 encode-skel.obj: encode-skel.c.obj
 
 .PHONY : encode-skel.obj
@@ -176,6 +149,33 @@ encode-skel.c.s:
 	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/encode-skel.c.s
 .PHONY : encode-skel.c.s
 
+encode_draft.obj: encode_draft.c.obj
+
+.PHONY : encode_draft.obj
+
+# target to build an object file
+encode_draft.c.obj:
+	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/encode_draft.c.obj
+.PHONY : encode_draft.c.obj
+
+encode_draft.i: encode_draft.c.i
+
+.PHONY : encode_draft.i
+
+# target to preprocess a source file
+encode_draft.c.i:
+	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/encode_draft.c.i
+.PHONY : encode_draft.c.i
+
+encode_draft.s: encode_draft.c.s
+
+.PHONY : encode_draft.s
+
+# target to generate assembly for a file
+encode_draft.c.s:
+	$(MAKE) -f CMakeFiles\proj_1.dir\build.make CMakeFiles/proj_1.dir/encode_draft.c.s
+.PHONY : encode_draft.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +185,12 @@ help:
 	@echo ... proj_1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... decode-skel.obj
-	@echo ... decode-skel.i
-	@echo ... decode-skel.s
 	@echo ... encode-skel.obj
 	@echo ... encode-skel.i
 	@echo ... encode-skel.s
+	@echo ... encode_draft.obj
+	@echo ... encode_draft.i
+	@echo ... encode_draft.s
 .PHONY : help
 
 

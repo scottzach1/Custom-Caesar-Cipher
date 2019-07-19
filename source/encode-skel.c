@@ -42,8 +42,7 @@ char* fixkey(char* s){
   return strcpy(s, plain);
 }
 
-char *table;
-int offset;
+char table[26];
 
 void buildtable (char* key, char* encode) {
 
@@ -56,38 +55,29 @@ void buildtable (char* key, char* encode) {
     // You are implementing a Caesar 1 & 2 combo Cypher as given in handout.
     // Your code here:
 
+    for (int i=0; i<26; i++) table[i] = '_';
 
-    //TODO: The following code has not been tested, do not trust it yet.
+    int tableIndex = strlen(key); // initial offset
+    fixkey(key);
 
-    offset = strlen(key);
-    memset(table, 26, sizeof(char)); // Allocate enough memory for the encipher table.
-
-    // NOTE: The following will alter the key.
-    fixkey(key); // fix the key, i.e., uppercase and remove whitespace and punctuation
-
-    int tableIndex = offset;
-    for (int keyIndex = 0; keyIndex < strlen(key); ++keyIndex) {
-        if (tableIndex > 25) tableIndex = 0; // reset index
+    for (int keyIndex = 0; keyIndex < strlen(key); ++keyIndex, ++tableIndex) {
+        if (tableIndex > 26) tableIndex = 0; // reset index
         table[tableIndex] = key[keyIndex];
-        ++tableIndex;
     }
 
-    char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char prevChar = (tableIndex != 0) ? table[tableIndex - 1] : table[0];
 
-    // WHILE: We have not written to this location yet.
-    while (!table[tableIndex]) {
-        if (tableIndex > 25) tableIndex = 0; // reset index
-        char newChar = (prevChar != 'Z]') ? prevChar + 1 : 'A';
+    // While we have not written to this location yet
+    while (table[tableIndex] == '_') {
 
-        table[tableIndex] = newChar;
-        prevChar = newChar;
+        do prevChar = (prevChar != 'Z') ? prevChar + 1 : 'A';
+        while (strchr(table, prevChar) != NULL); // Keep incrementing chars till we haven't used one.
+
+        table[tableIndex] = prevChar;
 
         ++tableIndex;
+        if (tableIndex > 25) tableIndex = 0; // increment or reset index
     }
-
-    // Do some stuff here to make a translation between plain and cypher maps.
-
 }
 
 int main(int argc, char **argv){
