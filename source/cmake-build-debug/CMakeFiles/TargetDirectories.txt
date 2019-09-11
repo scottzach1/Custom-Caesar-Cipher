@@ -1,3 +1,0 @@
-Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/proj_1.dir
-Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/edit_cache.dir
-Z:/Drive/GitHub/NWEN243_Project1/source/cmake-build-debug/CMakeFiles/rebuild_cache.dir

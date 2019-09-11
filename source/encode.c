@@ -42,8 +42,6 @@ char* fixkey(char* s){
   return strcpy(s, plain);
 }
 
-char table[26];
-
 void buildtable (char* key, char* encode) {
 
     // This function needs to build an array of mappings in the 'encode' array from plaintext characters
@@ -55,28 +53,45 @@ void buildtable (char* key, char* encode) {
     // You are implementing a Caesar 1 & 2 combo Cypher as given in handout.
     // Your code here:
 
-    for (int i=0; i<26; i++) table[i] = '_';
+    // Useful For Knowing where we have been.
+    for (int i = 0; i < 26; i++) encode[i] = '_';
 
-    int tableIndex = strlen(key); // initial offset
+    int tableIndex = strlen(key) - 1; // initial offset
+
     fixkey(key);
 
-    for (int keyIndex = 0; keyIndex < strlen(key); ++keyIndex, ++tableIndex) {
-        if (tableIndex > 26) tableIndex = 0; // reset index
-        table[tableIndex] = key[keyIndex];
+    // remove duplicates in key.
+    for (char *current = key; current != key + strlen(key); ++current) {
+        char *duplicate = strchr((current + 1), *current);
+        if (duplicate == NULL) continue; // this is the last index of current
+
+        // offset all subsequent chars to the left,
+        for (; duplicate != key + strlen(key) - 1; ++duplicate)
+            *duplicate = *(duplicate + 1);
+
+        // clear last character.
+        key[strlen(key) - 1] = '\0';
     }
 
-    char prevChar = (tableIndex != 0) ? table[tableIndex - 1] : table[0];
+    // Place key in encode.
+    for (int keyIndex = 0; keyIndex < strlen(key); ++keyIndex, ++tableIndex) {
+        if (tableIndex > 26) tableIndex = 0; // reset index
+        encode[tableIndex] = key[keyIndex];
+    }
 
-    // While we have not written to this location yet
-    while (table[tableIndex] == '_') {
+    // Remember Last Char, ternary as it could have reset.
+    char prevChar = (tableIndex != 0) ? encode[tableIndex - 1] : encode[0];
+
+
+    // While we have not written to this location yet, fill with rest of alphabet.
+    while (encode[tableIndex] == '_') {
 
         do prevChar = (prevChar != 'Z') ? prevChar + 1 : 'A';
-        while (strchr(table, prevChar) != NULL); // Keep incrementing chars till we haven't used one.
+        while (strchr(encode, prevChar) != NULL); // Keep incrementing chars till we haven't used one.
 
-        table[tableIndex] = prevChar;
+        encode[tableIndex] = prevChar;
 
-        ++tableIndex;
-        if (tableIndex > 25) tableIndex = 0; // increment or reset index
+        if (++tableIndex > 25) tableIndex = 0; // increment and/or reset index
     }
 }
 
@@ -102,7 +117,7 @@ int main(int argc, char **argv){
 
   fprintf(stderr,"key: %s - %d\n", encode, strlen(encode));
 
-  // the following code does the translations.  Characters are read 
+  // the following code does the translations.  Characters are read
   // one-by-one from stdin, translated and written to stdout.
 
   ch = fgetc(stdin);
@@ -110,7 +125,7 @@ int main(int argc, char **argv){
     if(isalpha(ch)){        // only encrypt alpha chars
       ch = upcase(ch);      // make it uppercase
       fputc(encode[ch-'A'], stdout);
-    }else 
+    }else
       fputc(ch, stdout);
     ch = fgetc(stdin);      // get next char from stdin
   }
